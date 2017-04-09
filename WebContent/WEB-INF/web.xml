@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>VoiceRecognitionSystem</display-name>
+  
+<servlet>
+  <servlet-name>UserController</servlet-name>
+  <servlet-class>com.voicerecog.controller.UserController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>UserController</servlet-name>
+  <url-pattern>/UserController</url-pattern>
+  </servlet-mapping>
+  
+ <!-- this is the recording servlet  -->
+ 
+ <servlet>
+  <servlet-name>UserSoundRecord</servlet-name>
+  <servlet-class>com.voicerecog.controller.UserSoundRecord</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>UserSoundRecord</servlet-name>
+  <url-pattern>/UserSoundRecord</url-pattern>
+  </servlet-mapping>
+  
+  
+   <!-- this is the identifying servlet  -->
+ 
+ <servlet>
+  <servlet-name>UserExistingController</servlet-name>
+  <servlet-class>com.voicerecog.controller.UserExistingController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>UserExistingController</servlet-name>
+  <url-pattern>/UserExistingController</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- this is the verifying servlet  -->
+   <servlet>
+  <servlet-name>UserVerifyController</servlet-name>
+  <servlet-class>com.voicerecog.controller.UserVerifyController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>UserVerifyController</servlet-name>
+  <url-pattern>/UserVerifyController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>UserVerifyEnrollController</servlet-name>
+  <servlet-class>com.voicerecog.controller.UserVerifyEnrollController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>UserVerifyEnrollController</servlet-name>
+  <url-pattern>/UserVerifyEnrollController</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <welcome-file-list>
+   
+    <welcome-file>index.jsp</welcome-file>
+   
+  </welcome-file-list>
+</web-app>
